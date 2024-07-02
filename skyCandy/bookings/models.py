@@ -16,7 +16,6 @@ class Booking(models.Model):
         ('afternoon', 'Afternoon'),
         ('evening', 'Evening'),
     ]
-
     package = models.ForeignKey(Package, on_delete=models.CASCADE)
     date = models.DateField()
     time_slot = models.CharField(max_length=50, choices=TIME_SLOTS)
